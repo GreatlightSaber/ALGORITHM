@@ -37,7 +37,7 @@ import org.junit.jupiter.api.Test;
  * 스파이는 하루에 최소 한 개의 의상은 입습니다.
  * 
  * */
-public class soluton3 {
+public class soluton4 {
 	@Test
 	public void test() {
 		
