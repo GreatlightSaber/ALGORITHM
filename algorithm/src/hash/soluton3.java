@@ -1,8 +1,6 @@
 package hash;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,52 +38,26 @@ import org.junit.jupiter.api.Test;
 public class soluton3 {
 	@Test
 	public void test() {
-		
+		String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"},{"red_hat", "headgear"},{"red_sunglasses", "eyewear"},{"blue_jeans", "pants"}};
+		solution(clothes);
 	}
     public int solution(String[][] clothes) {
-        int answer = 0;
-        ArrayList<Integer> arrKindOfClothesCount = new ArrayList<Integer>();
-        ArrayList<String> arrKindOfClothesName = new ArrayList<String>();
-//        String[][] arrClothesName;
-//        int iKindOfClothes = 0;
-//        // 의상 종류
-//        for(String[] item1 : clothes) {
-//        	if(!arrKindOfClothes.contains(item1[1])) {
-//        		arrKindOfClothes.add(item1[1]);
-//        		iKindOfClothes++;
-//        	}
-//        }
-//        arrClothesName = new String[iKindOfClothes][];
+        int answer = 1;
+        HashMap<String,Integer> kindOfClothesCount = new HashMap<String,Integer>();
         
-//        Arrays.sort(clothes, new Comparator<String[]>() {
-//			@Override
-//			public int compare(String[] o1, String[] o2) {
-//				String kindOfClothe1 = o1[1];
-//				String kindOfClothe2 = o2[1];
-//				return kindOfClothe1.compareTo(kindOfClothe2);
-//			}
-//		});
-        
-        int count = -1;
         for(String[] item1 :clothes) {
         	String strKindOfClotheName = item1[1];
-        	if(!arrKindOfClothesName.contains(strKindOfClotheName)) {
-        		count++;
-        		arrKindOfClothesName.add(strKindOfClotheName);
-        		arrKindOfClothesCount.set(count, 1);
+        	if(!kindOfClothesCount.containsKey(strKindOfClotheName)) {
+        		kindOfClothesCount.put(strKindOfClotheName,1);
         	}else {
-        		arrKindOfClothesCount.set(count, arrKindOfClothesCount.get(count) + 1); 
-        	}
-        	
-        }
-        int total = 0;
-        for(int num1 = 1 ; num1 < arrKindOfClothesCount.size() ; num1++) {
-        	for(int num2 = 1; num2 < arrKindOfClothesCount.size() ; num2++) {
-        		
+        		kindOfClothesCount.replace(strKindOfClotheName, kindOfClothesCount.get(strKindOfClotheName) +1);
         	}
         }
-        
-        
+        for(String key : kindOfClothesCount.keySet()) {
+        	answer *= (kindOfClothesCount.get(key) + 1);
+        }
+        answer -= 1;
+        System.out.println(answer);
         return answer;
     }
 }
