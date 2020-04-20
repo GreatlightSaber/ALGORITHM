@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
  * 각 전화번호의 길이는 1 이상 20 이하입니다.
  * 
  * */
-public class soluton2 {
+public class solution2 {
 	@Test
 	public void test() {
 		String[] phone_book = {"11","123","567","5678"};

@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
  * commands의 각 원소는 길이가 3입니다. 
  * 
  * */
-public class soluton1 {
+public class solution1 {
 	@Test
 	public void test() {
 //		int[] array = {1,5,2,6,3,7,4};

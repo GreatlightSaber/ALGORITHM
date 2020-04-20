@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
  * 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
  * 
  * */
-public class soluton2 {
+public class solution2 {
 	@Test
 	public void test() {
 		//int[] numbers = {6,10,2};

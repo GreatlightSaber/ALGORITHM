@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
  * 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
  * 
  * */
-public class soluton3 {
+public class solution3 {
 	@Test
 	public void test() {
 		// int[] citations = {3, 0, 6, 1, 5};

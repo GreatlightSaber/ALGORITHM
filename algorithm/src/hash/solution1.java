@@ -19,7 +19,7 @@ import org.junit.jupiter.api.Test;
  * 참가자 중에는 동명이인이 있을 수 있습니다. 
  * 
  * */
-public class soluton1 {
+public class solution1 {
 	@Test
 	public void test() {
 //		String[] participant = {"leo", "kiki", "eden"};

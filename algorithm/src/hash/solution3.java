@@ -35,7 +35,7 @@ import org.junit.jupiter.api.Test;
  * 스파이는 하루에 최소 한 개의 의상은 입습니다.
  * 
  * */
-public class soluton3 {
+public class solution3 {
 	@Test
 	public void test() {
 		String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"},{"red_hat", "headgear"},{"red_sunglasses", "eyewear"},{"blue_jeans", "pants"}};
